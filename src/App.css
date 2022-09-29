@@ -1,4 +1,4 @@
-.card-background {
+.card-container {
   width: 285px;
   height: 500px;
   display: flex;
@@ -30,6 +30,7 @@
   z-index: 5;
   background-color: #fbbe01;
   border-radius: 50%; 
+  overflow: hidden;
 }
 
 .container {
@@ -38,4 +39,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.top-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1.2;
+  /* position: relative; */
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1em 15px;
+}
+
+.bottom-container {
+  display: flex;
+  flex: 0.8;
+  padding: 0 1em
+}
+
+.nike-text {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  z-index: 10;
+  font-size: 76px;
+  font-weight: 900;
 }

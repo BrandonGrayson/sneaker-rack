@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
+// import styled from "styled-components";
 import "./App.css";
 
 function App() {
@@ -15,10 +16,14 @@ function App() {
         }}
       >
         <div className="container">
-          <div className="card-background">
-            <div className="circle-wrapper">
-              <div className="circle"></div>
+          <div className="card-container">
+            <div className="top-container">
+              <div className="circle-wrapper">
+                <div className="circle"></div>
+              </div>
+              <div className="nike-text">Nike Air</div>
             </div>
+            <div className="bottom-container">Bottom</div>
           </div>
         </div>
       </Grid>
