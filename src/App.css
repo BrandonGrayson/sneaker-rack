@@ -8,6 +8,7 @@
   color: #fff;
   position: relative;
   cursor: grab;
+  border-radius: 25px;
 }
 
 .circle-wrapper {
@@ -17,7 +18,7 @@
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
-  border-top-right-radius: 1px;
+  border-top-right-radius: 25px;
 }
 
 .circle {
