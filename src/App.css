@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   flex: 1.2;
-  /* position: relative; */
+  position: relative;
   align-items: center;
   justify-content: flex-end;
   padding: 1em 15px;
@@ -65,4 +65,28 @@
   z-index: 10;
   font-size: 76px;
   font-weight: 900;
+}
+
+.shoes-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shoes {
+  width: auto;
+  height: 190px;
+  z-index: 99;
+  user-select: none;
+  /* margin-right: 1em; */
+  /* margin-top: 4em; */
+}
+
+.shoes img {
+    width: auto;
+    height: 100%;
+    user-select: none;
 }

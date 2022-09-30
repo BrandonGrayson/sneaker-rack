@@ -21,6 +21,11 @@ function App() {
               <div className="circle-wrapper">
                 <div className="circle"></div>
               </div>
+              <div className="shoes-wrapper">
+                <div className="shoes">
+                  <img src="./img/air-jordan-transparent.png" alt="" />
+                </div>
+              </div>
               <div className="nike-text">Nike Air</div>
             </div>
             <div className="bottom-container">Bottom</div>
