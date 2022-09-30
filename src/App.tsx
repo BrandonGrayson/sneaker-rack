@@ -1,9 +1,14 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import "./App.css";
 
 function App() {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(x, [-100, 100], [-30, 30]);
+  const rotateY = useTransform(y, [-100, 100], [30, -30]);
+
   return (
     <Grid container>
       <Grid
@@ -17,13 +22,33 @@ function App() {
       >
         <div className="container">
           <div className="card-wrapper">
-            <motion.div className="card-container">
+            <motion.div
+              className="card-container"
+              style={{ x, y, rotateX, rotateY, z: 100 }}
+              drag
+              dragElastic={0.16}
+              dragConstraints={{ top: 0, right: 0, left: 0, bottom: 0 }}
+              whileTap={{ cursor: "grabbing" }}
+            >
               <div className="top-container">
                 <div className="circle-wrapper">
                   <div className="circle"></div>
                 </div>
                 <div className="shoes-wrapper">
-                  <motion.div className="shoes" style={{ rotate: "-25deg" }}>
+                  <motion.div
+                    className="shoes"
+                    style={{
+                      x,
+                      y,
+                      rotateX,
+                      rotateY,
+                      rotate: "-25deg",
+                      z: 10000,
+                    }}
+                    drag
+                    dragElastic={0.12}
+                    whileTap={{ cursor: "grabbing" }}
+                  >
                     <img
                       src="./img/air-jordan-transparent.png"
                       alt="Air Jordan sneakers"
